@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center>
+<h2 class="m-3">Add Place Details-User defined</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+  <div class="mb-3 col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="n">
+  </div>
+  <div class="mb-3 col-md-6">
+    <label for="description" class="form-label">Description</label>
+    <input type="text" class="form-control" id="description" name="d">
+  </div>
+      <div class="mb-3 col-md-6">
+    <label for="image" class="form-label">Image</label>
+    <input type="file" class="form-control" id="image" name="i">
+  </div>
+  <button type="submit" class="btn btn-danger col-md-2">Submit</button>
+</form>
+  </center>
+{% endblock %}
